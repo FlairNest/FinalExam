@@ -1,3 +1,7 @@
+$('.message a').click(function(){
+  $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+
 function myValidation(){  
     if(validation())
     {
@@ -119,3 +123,86 @@ const PasswordCheck = (password) => {
   const requirementsP = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,})");
   return requirementsP.test(password);
 };
+
+const admin = [
+  {
+      email:"admin",
+      psw:"123123",
+      name: "admin",
+  },
+]
+
+localStorage.setItem("admin", JSON.stringify(admin));
+
+function myValidation1(){  
+    if(validation1())
+    {
+        
+    }
+    return false;     
+}
+
+function validation1(){
+    
+    var password = document.reg1.psw.value;
+    var email = document.reg1.email.value; 
+    if (email==null || email==""){
+        alert("Вы забыли ввести email");  
+        
+      return false;  
+    }
+    else {
+         
+    }
+
+    if(password.length<6){  
+        alert("Пароль должен включать в себя 6 символов,один символ нижнего регистра,один символ верхнего регистра, хотя бы одну цифру");
+          
+      return false;  
+      }
+      else {
+        
+    }
+    admincheck();
+}
+
+function admincheck(){
+
+  const email = document.reg1.email.value;
+  const psw = document.reg1.psw.value;
+  
+  let admin_records=new Array();
+  let user_records=new Array();
+  user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+  admin_records=JSON.parse(localStorage.getItem("admin"))?JSON.parse(localStorage.getItem("admin")):[]
+  enable_records=JSON.parse(localStorage.getItem("DisabledUsers"))?JSON.parse(localStorage.getItem("DisabledUsers")):[]
+
+  if(enable_records.some((v)=>{return v.email==email})){
+    alert("Вам вход запрещен");
+  }
+  else if(admin_records.some((v)=>{return v.email==email && v.psw==psw})){
+  
+  alert("Вход действителен");
+  
+  let current_user=admin_records.filter((v)=>{return v.email==email && v.psw==psw})[0]
+  
+      localStorage.setItem('name',current_user.name);
+      localStorage.setItem('email',current_user.email);
+  
+    window.location.href="index4.html"
+  }
+  else if(user_records.some((v)=>{return v.email==email && v.psw==psw}))
+  {
+    alert("Вход действителен");
+
+    let current_user=user_records.filter((v)=>{return v.email==email && v.psw==psw})[0]
+
+    localStorage.setItem('name',current_user.name);
+    localStorage.setItem('email',current_user.email);
+
+    window.location.href="authorized/index3.html"
+  }
+  else{
+      alert('Вход не действителен');
+  }
+}

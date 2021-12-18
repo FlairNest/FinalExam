@@ -205,3 +205,21 @@ function updateRecord(formData) {
     
     localStorage.setItem('users', JSON.stringify(updatedUser));
 }
+
+function disable(formData) {
+
+var userss = JSON.parse(localStorage.getItem('DisabledUsers')) || [];
+
+var Disabled = 
+{
+ 'email': document.reg.email.value
+};
+
+userss.push(Disabled);
+
+ localStorage.setItem('DisabledUsers', JSON.stringify(userss));
+}
+
+function enable() {
+    localStorage.removeItem('DisabledUsers');
+}
