@@ -4,6 +4,6 @@ let name=localStorage.getItem('name')?localStorage.getItem('name'):''
 
           alert('U need to login first');
 
-          window.location.href="../index3.html";
+          window.location.href="../index.html";
 
 }

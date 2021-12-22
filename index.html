@@ -1,46 +1,91 @@
 <!DOCTYPE html>
-<html lang="en-ru">
-<head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Login and Registration</title>
-
-<link href="css/style1.css" rel="stylesheet" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://use.fontawesome.com/e67a350474.js"></script>
-</head>
-
-<body>
-
-    <div class="login-page">
-
-        <div class="form">
-          <form class="register-form" name="reg" onsubmit="return myValidation()">
-        
-            <input type="text" id="email" name="email" placeholder="Электронная почта"/>
-            <input type="text" id="name" name="name" placeholder="Имя"/>
-            <input type="password" id="psw" name="psw" placeholder="Пароль"/>
-
-            <button type="submit">Зарегистрироваться</button>
-            <p class="message">Уже зарегистрированы? <a href="#">Войдите</a></p>
-
-          </form>
-
-          <form class="login-form" name="reg1" onsubmit="return myValidation1()">
-
-            <input type="text" id="email" name="email" placeholder="Электронная почта"/>
-            <input type="password" id="psw" name="psw" placeholder="Пароль"/>
-
-            <button type="submit">Войти</button>
-            <p class="message">Еще не зарегистрировались? <a href="#">Создайте аккаунт</a></p>
-
-          </form>
-        </div>
-
-      </div>
-
-<script type="text/javascript" src="js/registration.js"></script>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>UGMONK | CAFFEE | HOME</title>
+		<link rel="stylesheet" type="text/css" href="css/style3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+		<link rel="icon" href="images/Coffee-logo-design.png">
+	</head>
+	<body>
+		<header>
+			<div class="navbar">
+				<img class="logo" src="images/logo.png">
+				<div class="menu">
+					<a href="index.html" class="item item1">Home</a>
+					<a href="index3.1.html" class="item item2">Menu</a>
+					<a href="index3.2.html" class="item item3">Our Branches</a>
+					<a href="index3.3.html" class="item item4">Employee Information</a>
+				</div>
+				<div class="tools">
+					<a href="index3.html" class="name">Login | Register</a>
+				</div>
+			</div>
+		</header>
+		<section class="main_page">
+			<div class="main_text" style="--td: 1.2s">
+				<p class="text text1 animation" style="--bc: #415167; --d: .1s">YOUR</p>
+				<p class="text text2 animation" style="--bc: #C7A17A; --d: .1s">PERSONALIZED</p>
+				<p class="text text3 animation" style="--bc: #415167; --d: .1s">COFFEE</p>
+			</div>
+		</section>
+		<section class="info_container">
+			<div class="header">
+				<p class="info_header">COFFEE BUILD YOUR BASE</p>
+			</div>
+			<div class="info_item info_item1">
+				<img class="icon" src="images/icon1.png">
+				<p class="info_heading">Sources</p>
+				<p class="info_p">Arabica and Robusta coffee beans meet international standards.</p>
+			</div>
+			<div class="info_item info_item2">
+				<img class="icon" src="images/icon2.png">
+				<p class="info_heading">Quality</p>
+				<p class="info_p">Each coffee bean is a highly concentrated process of coffee artisans.</p>
+			</div>
+			<div class="info_item info_item3">
+				<img class="icon" src="images/icon3.png">
+				<p class="info_heading">Nuts</p>
+				<p class="info_p">70% of the quality of a cup of coffee comes from the origin and quality of the green bean.</p>
+			</div>
+			<div class="info_item info_item4">
+				<img class="icon" src="images/icon4.png">
+				<p class="info_heading preparation">Preparation</p>
+				<p class="info_p">The coffee beans are molted through a thorough and rigorous roasting process.</p>
+			</div>
+		</section>
+		<footer class="links">
+			<div class="frame1">
+				<p><a class="text-link linkitem1" href="#">Customer Service</a></p>
+				<p><a class="text-link linkitem2" href="#">Help / FAQ</a></p> 
+				<p><a class="text-link linkitem3" href="#">Returns & Exchanges</a></p> 
+				<p><a class="text-link linkitem4" href="#">Sizing</a></p> 
+				<p><a class="text-link linkitem5" href="#">Gift Cards</a></p> 
+				<p><a class="text-link linkitem6" href="#">Contact Us</a></p>
+				<p><a class="text-link linkitem7" href="#">About</a></p>
+				<p><a class="text-link linkitem8" href="#">Our Story</a></p>
+				<p><a class="text-link linkitem9" href="#">Caffee</a></p>
+				<p><a class="text-link linkitem10" href="#">Journal</a></p>
+				<p><a class="text-link linkitem11" href="#">About our Coffees</a></p>
+				<p><a class="text-link linkitem12" href="#">Reviews</a></p>
+			</div>
+			<div class="frame2">
+				<div class="copyright">
+					<p>© Ugmonk 2021</p>
+					<p>All images and content may not be used without permission</p>
+				</div>
+				<div class="footer-logo">
+					<img src="images/Group.png" alt="">
+				</div>
+				<div class="media-links">
+					<a href="https://www.instagram.com" target="_blank"><img class="media-logo" src="images/Vector (1).png"></a>
+					<a href="https://twitter.com" target="_blank"><img class="media-logo" src="images/Vector (2).png"></a>
+					<a href="https://www.facebook.com" target="_blank"><img class="media-logo" src="images/Vector (3).png"></a>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/logout.js"></script>
+	</body>
 </html>

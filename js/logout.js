@@ -3,6 +3,6 @@ function Logout(){
   if (Leave){
     localStorage.removeItem('name');
     localStorage.removeItem('email');
-    window.location.href="../index3.html";
+    window.location.href="../index.html";
   }
 }
