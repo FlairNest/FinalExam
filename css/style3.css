@@ -39,6 +39,10 @@
         padding-top: 15px;
     }
 
+    .item:hover{
+        filter: drop-shadow(0px 4px 24px rgba(205, 205, 205, 0.5));
+    }
+
     .item1{
         grid-column: 1;
         grid-row: 1;
@@ -70,12 +74,17 @@
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 16px;
         background-color: #ffffff;
-        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .name:hover{
+        filter: drop-shadow(0px 4px 24px rgba(205, 205, 205, 0.5));
+        text-decoration: underline;
     }
 
     .main_page{
-        height: 600px;
-        background-color: #faefec;
+        height: 300px;
+        background-color: #c3dafc;
 
         display: grid;
         grid-template-columns: repeat(4, auto);
@@ -89,23 +98,6 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
-
-        position: relative;
-        animation-name: fade_in;
-        animation-duration: 800ms;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes fade_in{
-        0%{
-            left: -200px;
-            opacity: 0;
-        }
-        100%{
-            left: 0px;
-            opacity: 1;
-        }
     }
 
     .text{
@@ -118,6 +110,8 @@
 
     .text1{
         grid-row: 1;
+
+        color: #415167;
     }
     .text2{
         grid-row: 2;
@@ -128,6 +122,62 @@
     }
     .text3{
         grid-row: 3;
+
+        color: #415167;
+    }
+
+    .animation{
+        --t: calc(var(--td) + var(--d));
+        
+        color: transparent;
+        padding: 4px;
+        
+        position: relative;
+        overflow: hidden;
+        
+        animation: revealBlock 0s var(--t) forwards;
+    }
+
+    .animation::after{
+        content: '';
+        
+        width: 0%;
+        height: 100%;
+        padding-bottom: 4px;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        background: var(--bc);
+        animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+    }
+
+    @keyframes revealBlock {
+        100% {
+            color: #ffffff;
+        }
+    }
+      
+    @keyframes revealingIn {
+        0% {
+            width: 0;
+        }
+      
+        100% {
+            width: 100%;
+        }
+    }
+      
+    @keyframes revealingOut {
+        0% {
+            transform: translateX(0);
+        }
+      
+        100% {
+            transform: translateX(100%);
+        }
+      
     }
 
     .info_container{

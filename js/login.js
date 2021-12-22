@@ -75,7 +75,7 @@ function admincheck(){
     localStorage.setItem('name',current_user.name);
     localStorage.setItem('email',current_user.email);
 
-    window.location.href="index3.html"
+    window.location.href="index3authorized.html"
   }
   else{
       alert('Вход не действителен');

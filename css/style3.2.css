@@ -9,84 +9,93 @@
     }
 
     .navbar{
-        width: 1440px;
-        height: 115px;
-
         display: grid;
-        grid-template-columns: 265px 550px 253px;
-        gap: 100px;
+        grid-template-columns: repeat(3, auto);
+        gap: 30px;
+
+        padding: 32px 75px;
     }
 
     .logo{
         width: 265px;
         height: 41px;
 
-        padding-left: 75px;
-        padding-top: 32px;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .menu{
-        width: 550px;
-        height: 54px;
-
-        padding-left: 50px;
-        padding-top: 32px;
-
+        grid-column: 2;
+        grid-row: 1;
         display: grid;
-        grid-template-columns: 60px 50px 110px 210px;
-        gap: 32px;
+        grid-template-columns: repeat(4, auto);
+        gap: 40px;
     }
 
     .item{
         text-decoration: none;
         color:#292929;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        padding-top: 14.5px;
+        padding-top: 15px;
+    }
+
+    .item:hover{
+        filter: drop-shadow(0px 4px 24px rgba(205, 205, 205, 0.5));
+    }
+
+    .item1{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .item2{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .item3{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .item4{
+        grid-column: 4;
+        grid-row: 1;
     }
 
     .tools{
-        width: 253px;
-        height: 28px;
-
-        padding-top: 43px;
-        padding-left: 220px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
-
+    
     .name{
+        grid-column: 3;
+        grid-row: 1;
+
         border: none;
         color:#292929;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 16px;
         background-color: #ffffff;
+        margin-top: 10px;
+    }
+
+    .name:hover{
+        filter: drop-shadow(0px 4px 24px rgba(205, 205, 205, 0.5));
+        text-decoration: underline;
     }
 
     .maps{
-        width: 1270px;
-        height: 802px;
-
-        padding-right: 132px;
-    }
-
-    .container_bg{
-        width: 1076px;
-        height: 802px;
-
-        position: absolute;
-        z-index: -1;
-
+        height: 800px;
         background-color: #EDF0F5;
     }
 
     .maps_container{
         display: grid;
+        grid-template-rows: repeat(3, auto);
     }
 
     .title{
-        width: 350px;
-        height: 62px;
+        grid-row: 1;
 
-        padding-top: 86px;
-        padding-left: 560px;
+        padding-top: 85px;
     }
 
     .container_subheading{
@@ -106,46 +115,36 @@
         font-weight: 900;
         font-size: 30px;
         line-height: 34px;
+        text-align: center;
         
         color: #415167;
-
-        padding-left: 55px;
     }
 
     .map{
-        width: 1138px;
-        height: 463px;
+        height: 460px;
+        grid-row: 2;
 
-        padding: 66px 134px 125px 130px;
+        padding: 65px 130px;
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 60px;
+        grid-template-columns: repeat(3, auto);
     }
 
     .map_image{
         width: 490px;
         height: 460px;
-        z-index: 1;
-    }
 
-    .content_bg{
-        width: 560px;
-        height: 460px;
-
-        position: absolute;
-        left: 620px;
-        z-index: 0;
-
-        background-color: #ffffff;
-        box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
+        grid-column: 1;
+        justify-self: end;
     }
 
     .map_content{
-        width: 430px;
-        height: 110px;
+        grid-column: 2;
 
-        padding: 138px 66px 212px 120px;
+        background-color: #ffffff;
+        box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
+        
+        padding: 130px 100px;
     }
 
     .map_title{
@@ -170,16 +169,17 @@
         color: #151D28;
     }
 
-    .on_map{
-        width: 134px;
-        height: 32px;
+    .btn{
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+    }
 
+    .on_map{
+        grid-column: 5;
         border: none;
         border-radius: 19px;
         background-color: #C7A17A;
-
-        margin-top: 120px;
-        margin-left: 230px;
     }
 
     .on_map_link{
@@ -193,16 +193,14 @@
     }
 
     .tabs{
+        grid-column: 3;
         width: 88px;
-        height: 460px;
-
-        padding-left: 500px;
-        z-index: 1;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
     }
 
     .tab1{
-        width: 88px;
-        height: 154px;
+        grid-row: 1;
 
         box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
 
@@ -210,8 +208,7 @@
     }
 
     .tab2{
-        width: 88px;
-        height: 154px;
+        grid-row: 2;
 
         box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
 
@@ -221,8 +218,7 @@
     }
 
     .tab3{
-        width: 88px;
-        height: 154px;
+        grid-row: 3s;
 
         box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
 
@@ -244,90 +240,118 @@
     }
 
     .links{
-        width: 1440px;
-        height: 359px;
+        display: grid;
+        padding: 50px;
         background-color: #faefec;
     }
 
-    .frame{
-        width: 1160px;
-        height: 189px;
-
-        padding: 84.84px 140px 85.16px 140px;
-
+    .frame1{
         display: grid;
-        grid-template-columns: 840px 320px;
+        text-align: left;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        grid-column: 1;
     }
 
-    .blocks{
-        width: 840px;
-        height: 189px;
+    .frame2{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        grid-column: 2;
     }
 
-    .text-block{
-        width: 300px;
-        height: 189px;
-    }
+    .text-link{
+        padding: 5px;
+        text-align: center;
+        font-size: 18px;
 
-    .text-block p{
-        padding-bottom: 16px;
-
+        text-decoration: none;
+        color: #1A1A1A;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-style: normal;
         font-weight: normal;
         font-size: 15px;
         line-height: 18px;
     }
 
-    .text-link{
-        text-decoration: none;
-        color: #1A1A1A;
+    .linkitem1{
+        grid-column: 1;
+        grid-row: 1;
     }
 
-    .frame2{
-        width: 320px;
-        height: 189px;
+    .linkitem2{
+        grid-column: 1;
+        grid-row: 2;
+    }
 
-        display: grid;
-        grid-template-columns: 240px 80px;
-        grid-template-rows: 123.5px 26.26px;
+    .linkitem3{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .linkitem4{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .linkitem5{
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .linkitem6{
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .linkitem7{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .linkitem8{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .linkitem9{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .linkitem10{
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .linkitem11{
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    .linkitem12{
+        grid-column: 2;
+        grid-row: 6;
     }
 
     .copyright{
-        width: 240px;
-        height: 123.5px;
+        grid-column: 1;
+        grid-row: 1;
 
+        text-decoration: none;
+        color: #1A1A1A;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-style: normal;
         font-weight: normal;
         font-size: 15px;
-        line-height: 21px;
-        text-align: right;
-    }
-
-    .copyright p{
-        padding-bottom: 10px;
+        line-height: 18px;
     }
 
     .footer-logo{
-        padding-left: 24.35px;
-
-        width: 54.39px;
-        height: 87.72px;
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .media-links{
-        width: 320px;
-        height: 26.26px;
-
-        display: flex;
-        justify-content: end;
-    }
-
-    .media-links a{
-        padding-left: 16px;
+        grid-column: 2;
+        grid-row: 2;
     }
 }
 
