@@ -1,6 +1,8 @@
 ### FinalExam
 
-### Ugmonk YOUR PERSONALIZED COFFEE
+### Ugmonk Your Personalized Coffee
+
+Contributions to the project:
 
 1) Abdulaev Ruslan JS part
 2) Bogembayeva Ainura HTML,CSS part
