@@ -1,27 +1,27 @@
-##### FinalExam
+### FinalExam
 
-#### Ugmonk YOUR PERSONALIZED COFFEE
+### Ugmonk YOUR PERSONALIZED COFFEE
 
 1) Abdulaev Ruslan JS part
 2) Bogembayeva Ainura HTML,CSS part
 
-### Links
+## Links
 
 - Repository URL: https://github.com/FlairNest/FinalExam
 - Live Site URL: https://flairnest.github.io/FinalExam/
 
-### Built with
+## Built with
 
 - Semantic HTML5 markup
 - CSS
 - Grid
 - JavaScript
 
-### Useful resources
+## Useful resources
 
 (https://www.w3schools.com/) - It was used to solve most issues
 
-## Authors
+# Authors
 
 1. Abdulaev Ruslan
 Instagram : https://instagram.com/flairke?utm_medium=copy_link
