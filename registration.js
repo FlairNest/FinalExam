@@ -207,7 +207,7 @@ function admincheck(){
     window.location.href="authorized/index3.html"
   }
   else{
-      alert('Вход не действителен');
+      alert('Неправильный пароль');
   }
 }
 
