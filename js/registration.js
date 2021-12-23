@@ -176,7 +176,8 @@ function admincheck(){
   user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
   admin_records=JSON.parse(localStorage.getItem("admin"))?JSON.parse(localStorage.getItem("admin")):[]
   enable_records=JSON.parse(localStorage.getItem("DisabledUsers"))?JSON.parse(localStorage.getItem("DisabledUsers")):[]
-
+  
+  
   if(enable_records.some((v)=>{return v.email==email})){
     alert("Вам вход запрещен");
   }
@@ -191,6 +192,9 @@ function admincheck(){
   
     window.location.href="index4.html"
   }
+  else if(checkuser()){
+    alert("Такого аккаунта не существует");
+  }
   else if(user_records.some((v)=>{return v.email==email && v.psw==psw}))
   {
     alert("Вход действителен");
@@ -203,6 +207,20 @@ function admincheck(){
     window.location.href="authorized/index3.html"
   }
   else{
-      alert('Вход не действителен');
+      alert('Неправильный пароль');
   }
+}
+
+function checkuser(){
+  
+  const email = document.reg1.email.value;
+  let user_records=new Array();
+  user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+
+if (user_records.some((v) =>{return v.email == email})){
+  return false;
+}
+else{
+  return true;
+}
 }
